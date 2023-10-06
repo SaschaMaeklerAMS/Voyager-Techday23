@@ -42,7 +42,7 @@ class EnterParameterScreen : Screen {
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(onClick = {
-                navigator.push(ParameterScreen(parameter = parameter))
+                // TODO navigate to ParameterScreen
             }) {
                 Text(text = "Submit")
             }
