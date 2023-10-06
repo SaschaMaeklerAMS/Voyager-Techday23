@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import cafe.adriel.voyager.navigator.Navigator
-import cafe.adriel.voyager.navigator.bottomSheet.BottomSheetNavigator
 import com.example.singlemoduleapp.ui.theme.ComposeDestinationsTheme
 import com.example.singlemoduleapp.welcome.WelcomeScreen
 
@@ -13,9 +12,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeDestinationsTheme {
-                BottomSheetNavigator {
-                    Navigator(WelcomeScreen())
-                }
+                // TODO Make BottomSheets possible
+                Navigator(WelcomeScreen())
             }
         }
     }

@@ -13,19 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.bottomSheet.LocalBottomSheetNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
-import com.example.singlemoduleapp.home.bottomsheet.BottomSheet
 import com.example.singlemoduleapp.home.parameter.EnterParameterScreen
-import com.example.singlemoduleapp.home.result.ResultScreen
-import com.example.singlemoduleapp.home.screenmodel.ScreenModelScreen
 
 class HomeScreen : Screen {
 
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
-        val bottomSheetNavigator = LocalBottomSheetNavigator.current
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -46,23 +41,7 @@ class HomeScreen : Screen {
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(onClick = {
-                navigator.push(ResultScreen)
-            }) {
-                Text(text = "ResultScreen")
-            }
-
-            Spacer(modifier = Modifier.height(30.dp))
-
-            Button(onClick = {
-                navigator.push(ScreenModelScreen())
-            }) {
-                Text(text = "ScreenModel")
-            }
-
-            Spacer(modifier = Modifier.height(30.dp))
-
-            Button(onClick = {
-                bottomSheetNavigator.show(BottomSheet())
+                //TODO show bottomsheet
             }) {
                 Text(text = "BottomSheet")
             }

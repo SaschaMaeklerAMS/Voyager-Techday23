@@ -12,14 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.navigator.bottomSheet.LocalBottomSheetNavigator
 
 class BottomSheet : Screen {
 
     @Composable
     override fun Content() {
-        val navigator = LocalBottomSheetNavigator.current
-
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
@@ -33,7 +30,7 @@ class BottomSheet : Screen {
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(onClick = {
-                navigator.push(BottomSheet2())
+                //TODO navigate to BottomSheet2
             }) {
                 Text(text = "BottomSheet2")
             }
