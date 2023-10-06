@@ -14,7 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Voyager"
-include(":multimoduleapp:app")
-include(":multimoduleapp:featuretwo")
-include(":multimoduleapp:featureone")
 include(":singlemoduleapp")
