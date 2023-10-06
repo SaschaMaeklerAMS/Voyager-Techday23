@@ -11,31 +11,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.navigator.LocalNavigator
-import cafe.adriel.voyager.navigator.currentOrThrow
 
-class WelcomeScreen : Screen {
+// TODO mirgrate function to Voyager Screen
+@Composable
+fun WelcomeScreenContent() {
+    // TODO get navigator
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
 
-    @Composable
-    override fun Content() {
-        val navigator = LocalNavigator.currentOrThrow
+        Text(text = "WelcomeScreen 1")
 
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
-        ) {
+        Spacer(modifier = Modifier.height(30.dp))
 
-            Text(text = "WelcomeScreen 1")
-
-            Spacer(modifier = Modifier.height(30.dp))
-
-            Button(onClick = {
-                navigator.push(WelcomeScreen2())
-            }) {
-                Text(text = "Continue")
-            }
+        Button(onClick = {
+            // TODO navigate to WelcomeScreen2
+        }) {
+            Text(text = "Continue")
         }
     }
 }
