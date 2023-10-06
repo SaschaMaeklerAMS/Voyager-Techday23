@@ -17,7 +17,6 @@ import cafe.adriel.voyager.navigator.bottomSheet.LocalBottomSheetNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.example.singlemoduleapp.home.bottomsheet.BottomSheet
 import com.example.singlemoduleapp.home.parameter.EnterParameterScreen
-import com.example.singlemoduleapp.home.result.ResultScreen
 import com.example.singlemoduleapp.home.screenmodel.ScreenModelScreen
 
 class HomeScreen : Screen {
@@ -41,14 +40,6 @@ class HomeScreen : Screen {
                 navigator.push(EnterParameterScreen())
             }) {
                 Text(text = "ParameterScreen")
-            }
-
-            Spacer(modifier = Modifier.height(30.dp))
-
-            Button(onClick = {
-                navigator.push(ResultScreen)
-            }) {
-                Text(text = "ResultScreen")
             }
 
             Spacer(modifier = Modifier.height(30.dp))

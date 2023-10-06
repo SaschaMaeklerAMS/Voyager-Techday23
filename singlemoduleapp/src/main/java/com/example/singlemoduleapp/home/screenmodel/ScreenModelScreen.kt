@@ -16,9 +16,10 @@ class ScreenModelScreen : Screen {
 
     @Composable
     override fun Content() {
-        val screenModel = rememberScreenModel { ScreenModelScreenScreenModel() }
+        // TODO get Screen Model
 
-        val text by screenModel.niceFlow.collectAsState(initial = "lame")
+        // TODO observe niceFlow from ScreenModel
+        val text = ""
 
         Column(
             modifier = Modifier.fillMaxSize(),
